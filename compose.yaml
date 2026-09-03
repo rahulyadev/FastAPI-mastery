@@ -1,0 +1,68 @@
+name: fastapi-mastery
+services:
+  postgres:
+    image: postgres:17.6-alpine
+    profiles: ["postgres"]
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-fastapi_mastery}
+      POSTGRES_USER: ${POSTGRES_USER:-fastapi_mastery}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local_only_change_me}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-55432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - fastapi_mastery_postgres:/var/lib/postgresql/data
+
+  redis:
+    image: redis:8.0-alpine
+    profiles: ["redis"]
+    ports:
+      - "127.0.0.1:${REDIS_PORT:-56379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+  mailpit:
+    image: axllent/mailpit:v1.27
+    profiles: ["mail-testing"]
+    ports:
+      - "127.0.0.1:${MAILPIT_SMTP_PORT:-51025}:1025"
+      - "127.0.0.1:${MAILPIT_UI_PORT:-58025}:8025"
+
+  otel-lgtm:
+    image: grafana/otel-lgtm:0.13.0
+    profiles: ["observability"]
+    ports:
+      - "127.0.0.1:${OTEL_LGTM_PORT:-53000}:3000"
+      - "127.0.0.1:4317:4317"
+      - "127.0.0.1:4318:4318"
+
+  rabbitmq:
+    image: rabbitmq:4.3.5-management
+    profiles: ["rabbitmq"]
+    hostname: fastapi-mastery-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_VHOST:-fastapi_mastery}
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-fastapi_mastery}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-local_only_change_me}
+      RABBITMQ_LEARNING_QUEUE: ${RABBITMQ_LEARNING_QUEUE:-fastapi.mastery.learning}
+    ports:
+      - "127.0.0.1:${RABBITMQ_AMQP_PORT:-5672}:5672"
+      - "127.0.0.1:${RABBITMQ_MANAGEMENT_PORT:-15672}:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+    volumes:
+      - fastapi_rabbitmq_data:/var/lib/rabbitmq
+
+volumes:
+  fastapi_mastery_postgres:
+  fastapi_rabbitmq_data:

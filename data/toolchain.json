@@ -1,0 +1,109 @@
+{
+  "canonical_python": "3.14.7",
+  "containers": {
+    "rabbitmq": {
+      "image": "rabbitmq:4.3.5-management",
+      "role": "Local AMQP broker with management UI under the rabbitmq Compose profile.",
+      "verified_source": "Docker Official Image supported tag list"
+    }
+  },
+  "packages": {
+    "aio-pika": {
+      "role": "Primary maintained asyncio AMQP 0-9-1 convenience client for RabbitMQ; AMQP concepts remain library-independent.",
+      "version": "10.0.1"
+    },
+    "aiormq": {
+      "role": "Resolved lower-level asynchronous AMQP client used by aio-pika.",
+      "version": "7.0.0"
+    },
+    "alembic": {
+      "role": "Schema migrations.",
+      "version": "1.19.1"
+    },
+    "anyio": {
+      "role": "Structured async runtime used by Starlette/testing.",
+      "version": "4.14.2"
+    },
+    "fastapi": {
+      "role": "Core framework.",
+      "version": "0.141.1"
+    },
+    "grpcio": {
+      "role": "gRPC runtime.",
+      "version": "1.83.1"
+    },
+    "grpcio-tools": {
+      "role": "Protobuf code generation; latest verified tools release at packaging.",
+      "version": "1.83.0"
+    },
+    "httpx": {
+      "role": "Stable HTTP client and ASGI testing; 1.0 development releases excluded.",
+      "version": "0.28.1"
+    },
+    "hypothesis": {
+      "role": "Property-based testing.",
+      "version": "6.165.10"
+    },
+    "mypy": {
+      "role": "Static analysis.",
+      "version": "2.3.1"
+    },
+    "opentelemetry-sdk": {
+      "role": "Optional observability SDK.",
+      "version": "1.44.0"
+    },
+    "protobuf": {
+      "role": "Protocol Buffers runtime.",
+      "version": "7.36.0"
+    },
+    "psycopg": {
+      "role": "PostgreSQL driver and pool.",
+      "version": "3.3.4"
+    },
+    "pydantic": {
+      "role": "Validation and serialization.",
+      "version": "2.13.4"
+    },
+    "pydantic-settings": {
+      "role": "Typed settings.",
+      "version": "2.15.0"
+    },
+    "pytest": {
+      "role": "Test runner.",
+      "version": "9.1.1"
+    },
+    "pytest-asyncio": {
+      "role": "Optional asyncio test compatibility; AnyIO plugin remains primary for many examples.",
+      "version": "1.3.0"
+    },
+    "pytest-cov": {
+      "role": "Coverage integration.",
+      "version": "7.1.0"
+    },
+    "python": {
+      "role": "Canonical runtime; examples retain Python 3.11 alternatives where useful.",
+      "version": "3.14.7"
+    },
+    "redis": {
+      "role": "Optional cache and pub/sub client.",
+      "version": "8.1.0"
+    },
+    "ruff": {
+      "role": "Formatter and linter.",
+      "version": "0.16.4"
+    },
+    "sqlalchemy": {
+      "role": "Stable SQLAlchemy 2.x; 2.1 prereleases excluded.",
+      "version": "2.0.52"
+    },
+    "starlette": {
+      "role": "Verified current release; resolved through FastAPI rather than pinned as a direct dependency.",
+      "version": "1.6.0"
+    },
+    "uvicorn": {
+      "role": "ASGI server.",
+      "version": "0.52.4"
+    }
+  },
+  "verified_on": "2026-08-29"
+}

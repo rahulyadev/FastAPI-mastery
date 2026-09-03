@@ -1,0 +1,234 @@
+{
+  "added_unit_count": 27,
+  "baseline_unit_count": 129,
+  "baseline_unit_rows_sha256": "5abab783bd6eee0527f2efd968aba31c03bbf7979530d0c63b4834a418684509",
+  "baseline_zip_sha256": "1adc52162b1abb2d0e4de375b82ac3ce4c8eab2599bd7f2f24197f14f4441085",
+  "final_unit_count": 156,
+  "micro_path": {
+    "assumed_prerequisites": [],
+    "assumed_prior_paths": [
+      "thirty-day-production-foundation"
+    ],
+    "checkpoint_minutes": [
+      960,
+      1440
+    ],
+    "declared_units": 47,
+    "full_mastery_hours": [
+      633,
+      1112
+    ],
+    "hours_per_week": [
+      10,
+      10
+    ],
+    "lab_minutes": [
+      2100,
+      3300
+    ],
+    "mock_minutes": [
+      240,
+      360
+    ],
+    "overlap_justifications": {
+      "rabbitmq-reliable-async-services": "Intentional superset: RabbitMQ is one complete phase of this broader service-engineering path, so learners who finished the focused path may mark those overlapping units as diagnostic revisits rather than repeat all labs.",
+      "senior-microservices-design-operations": "Intentional foundation: the senior route revisits a selected subset after this path and demands deeper design, incident, governance, and migration evidence."
+    },
+    "rapid_total_minutes": [
+      6645,
+      10010
+    ],
+    "rapid_unit_minutes": [
+      2865,
+      4190
+    ],
+    "recall_minutes": [
+      480,
+      720
+    ],
+    "schedule_weeks": [
+      12,
+      18
+    ],
+    "slug": "microservices-distributed-service-engineering"
+  },
+  "msv_first_hours": [
+    177,
+    304
+  ],
+  "msv_ids": [
+    "FAPI-MSV-010",
+    "FAPI-MSV-020",
+    "FAPI-MSV-030",
+    "FAPI-MSV-040",
+    "FAPI-MSV-050",
+    "FAPI-MSV-060",
+    "FAPI-MSV-070",
+    "FAPI-MSV-080",
+    "FAPI-MSV-090",
+    "FAPI-MSV-100",
+    "FAPI-MSV-110",
+    "FAPI-MSV-120",
+    "FAPI-MSV-130",
+    "FAPI-MSV-140",
+    "FAPI-MSV-150",
+    "FAPI-MSV-160",
+    "FAPI-MSV-170",
+    "FAPI-MSV-180",
+    "FAPI-MSV-190",
+    "FAPI-MSV-200",
+    "FAPI-MSV-210",
+    "FAPI-MSV-220",
+    "FAPI-MSV-230",
+    "FAPI-MSV-240",
+    "FAPI-MSV-250",
+    "FAPI-MSV-260",
+    "FAPI-MSV-270"
+  ],
+  "msv_practice_hours": [
+    227,
+    404
+  ],
+  "msv_rapid_minutes": [
+    1790,
+    2580
+  ],
+  "rabbit_path": {
+    "assumed_prerequisites": [],
+    "assumed_prior_paths": [
+      "thirty-day-production-foundation"
+    ],
+    "checkpoint_minutes": [
+      480,
+      720
+    ],
+    "declared_units": 22,
+    "full_mastery_hours": [
+      282,
+      496
+    ],
+    "hours_per_week": [
+      9,
+      10
+    ],
+    "lab_minutes": [
+      1080,
+      1680
+    ],
+    "mock_minutes": [
+      120,
+      180
+    ],
+    "overlap_justifications": {
+      "microservices-distributed-service-engineering": "Intentional focused subset: this path isolates RabbitMQ publisher, consumer, retry, idempotency, outbox, resilience, and observability evidence for learners who do not yet need the complete distributed-service curriculum."
+    },
+    "rapid_total_minutes": [
+      3210,
+      4840
+    ],
+    "rapid_unit_minutes": [
+      1290,
+      1900
+    ],
+    "recall_minutes": [
+      240,
+      360
+    ],
+    "schedule_weeks": [
+      6,
+      9
+    ],
+    "slug": "rabbitmq-reliable-async-services"
+  },
+  "rabbitmq_tooling": {
+    "client": "aio-pika",
+    "client_version": "10.0.1",
+    "compose_profile": "rabbitmq",
+    "container_image": "rabbitmq:4.3.5-management",
+    "resolved_driver": "aiormq",
+    "resolved_driver_version": "7.0.0"
+  },
+  "senior_path": {
+    "assumed_prerequisites": [],
+    "assumed_prior_paths": [
+      "microservices-distributed-service-engineering"
+    ],
+    "checkpoint_minutes": [
+      480,
+      720
+    ],
+    "declared_units": 20,
+    "full_mastery_hours": [
+      306,
+      536
+    ],
+    "hours_per_week": [
+      9,
+      9
+    ],
+    "lab_minutes": [
+      840,
+      1320
+    ],
+    "mock_minutes": [
+      360,
+      480
+    ],
+    "overlap_justifications": {
+      "microservices-distributed-service-engineering": "Intentional advanced revisit: every selected unit was previously studied, but this route raises evidence to cross-team contract ownership, migration strategy, reliability budgets, incident leadership, governance, and cost decisions."
+    },
+    "rapid_total_minutes": [
+      3390,
+      5000
+    ],
+    "rapid_unit_minutes": [
+      1350,
+      1940
+    ],
+    "recall_minutes": [
+      360,
+      540
+    ],
+    "schedule_weeks": [
+      7,
+      10
+    ],
+    "slug": "senior-microservices-design-operations"
+  },
+  "solid_reference_ids": [
+    "SDP-FND-020",
+    "SDP-FND-030",
+    "SDP-FND-040",
+    "SDP-FND-080",
+    "SDP-FND-100",
+    "SDP-FND-110",
+    "SDP-SOL-010",
+    "SDP-SOL-040",
+    "SDP-SOL-050",
+    "SDP-SOL-080",
+    "SDP-STR-010",
+    "SDP-STR-020",
+    "SDP-STR-040",
+    "SDP-BEH-020",
+    "SDP-BEH-030",
+    "SDP-BEH-040",
+    "SDP-BEH-050",
+    "SDP-APP-010",
+    "SDP-APP-040",
+    "SDP-APP-050",
+    "SDP-APP-060",
+    "SDP-APP-070",
+    "SDP-ARC-020",
+    "SDP-ARC-050",
+    "SDP-ARC-060",
+    "SDP-ARC-070",
+    "SDP-ARC-080",
+    "SDP-RAR-070",
+    "SDP-RAR-080",
+    "SDP-REF-070",
+    "SDP-REF-080",
+    "SDP-REF-090",
+    "SDP-INT-060",
+    "SDP-INT-090"
+  ]
+}
