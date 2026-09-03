@@ -1,0 +1,42 @@
+# Python environments and bytecode
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+
+# Tool caches and generated reports
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+coverage.json
+lcov.info
+build/
+dist/
+*.egg-info/
+
+# Local configuration, private material, and credentials
+.env
+.env.*
+!.env.example
+private/
+tokens/
+secrets/
+credentials/
+transcripts/
+chat-exports/
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
