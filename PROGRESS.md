@@ -28,7 +28,7 @@ A failed review may lower a state. Project completion does not advance unit stat
 
 | Unit ID | Title | Priority | Artifact state | Learning state | Last evidence | Next review | Weakest point | Evidence link |
 |---|---|:---:|---|---|---|---|---|---|
-| `FAPI-FND-010` | Python runtime, uv project, and reproducible environment | `C` | Absent | Not started | — | — | — | — |
+| `FAPI-FND-010` | Python runtime, uv project, and reproducible environment | `C` | Draft | Not started | — | — | — | — |
 | `FAPI-FND-020` | Minimal FastAPI application and first route | `C` | Absent | Not started | — | — | — | — |
 | `FAPI-FND-030` | Application entry points, import strings, reload, and server startup | `C` | Absent | Not started | — | — | — | — |
 | `FAPI-FND-040` | Interactive documentation, OpenAPI inspection, and simple API clients | `C` | Absent | Not started | — | — | — | — |
